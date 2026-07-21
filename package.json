@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx @opennextjs/cloudflare build",
     "start": "next start",
     "lint": "eslint .",
     "db:generate": "drizzle-kit generate",
@@ -22,13 +22,15 @@
     "react-dom": "19.2.6"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^0.5.10",
     "@types/node": "^22.19.19",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "drizzle-kit": "^0.31.10",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.6",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^3.112.0"
   },
   "type": "module",
   "displayName": "Koh Peaks Tours & Trails"
