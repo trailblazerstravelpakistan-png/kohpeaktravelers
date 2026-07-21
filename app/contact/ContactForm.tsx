@@ -195,7 +195,7 @@ export default function ContactForm() {
       )}
       {status === "error" && (
         <p className="form-error" role="alert">
-          {errorMsg} You can also call us at +92 335 4020394.
+          {errorMsg} You can also call us at +92 320 7538028.
         </p>
       )}
     </form>

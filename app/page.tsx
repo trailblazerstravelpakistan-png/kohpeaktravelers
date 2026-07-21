@@ -85,7 +85,7 @@ export default function Home() {
             <Link href="/contact">Contact Us</Link>
           </nav>
           <div className="header-actions">
-            <a className="phone-pill" href="tel:+923354020394"><Icon name="phone" size={17} /> +92 335 4020394</a>
+            <a className="phone-pill" href="tel:+923207538028"><Icon name="phone" size={17} /> +92 320 7538028</a>
             <Link className="button button-gold header-cta" href="/contact">Plan Your Trip</Link>
           </div>
           <details className="mobile-menu">
@@ -187,24 +187,24 @@ export default function Home() {
           <div className="adventure-cta" id="contact">
             <div className="cta-icon"><Icon name="phone" size={27}/></div>
             <div><h2>Ready to Start Your Adventure?</h2><p>Call or WhatsApp us now to plan your perfect trip.</p></div>
-            <a className="cta-number" href="tel:+923354020394">+92 335 4020394</a>
-            <a className="button button-gold" href="https://wa.me/923354020394"><Icon name="phone" size={18}/> Call / WhatsApp</a>
+            <a className="cta-number" href="tel:+923207538028">+92 320 7538028</a>
+            <a className="button button-gold" href="https://wa.me/923207538028"><Icon name="phone" size={18}/> Call / WhatsApp</a>
           </div>
-
+ 
           <footer className="footer">
             <div className="footer-grid">
-              <div className="footer-brand"><img src="/images/logo-light.png" alt="Koh Peaks Tours & Trails"/><p>We bring you closer to nature with unforgettable travel experiences across Northern Pakistan.</p><div className="socials"><a href="https://www.facebook.com/profile.php?id=61591595142078" target="_blank" rel="noopener" aria-label="Facebook">f</a><a href="https://www.instagram.com/koh_peaks" target="_blank" rel="noopener" aria-label="Instagram">◎</a></div></div>
+              <div className="footer-brand"><img src="/images/logo-light.png" alt="Koh Peaks Tours & Trails"/><p>We bring you closer to nature with unforgettable travel experiences across Northern Pakistan.</p><div className="socials"><a href="https://www.facebook.com/share/1HFew6Bm4s/" target="_blank" rel="noopener" aria-label="Facebook">f</a><a href="https://www.instagram.com/kohpeaks?igsh=ZnNxYm81a2l0NW52" target="_blank" rel="noopener" aria-label="Instagram">◎</a></div></div>
               <div><h3>Quick Links</h3><Link href="/">Home</Link><Link href="/destinations">Destinations</Link><Link href="/packages">Packages</Link><Link href="/services">Services</Link><Link href="/about">About Us</Link></div>
               <div><h3>Top Destinations</h3><Link href="/destinations/swat-kalam-malam-jabba">Swat, Kalam & Malam Jabba</Link><Link href="/destinations/hunza-khunjerab-pass">Hunza & Khunjerab Pass</Link><Link href="/destinations/mushkpuri-top">Mushkpuri Top</Link><Link href="/destinations/kumrat-jahaz-banda">Kumrat Valley</Link></div>
-              <div><h3>Contact Us</h3><a href="tel:+923354020394"><Icon name="phone" size={16}/>+92 335 4020394</a><a href="mailto:info@kohpeaks.com"><Icon name="mail" size={16}/>info@kohpeaks.com</a><span><Icon name="map" size={16}/>Office no # G-01, Davis Hytes, 38 Davis road, Lahore.</span></div>
+              <div><h3>Contact Us</h3><a href="tel:+923207538028"><Icon name="phone" size={16}/>+92 320 7538028</a><a href="mailto:kohpeaks@gmail.com"><Icon name="mail" size={16}/>kohpeaks@gmail.com</a><span><Icon name="map" size={16}/>Office no # G-01, Davis Hytes, 38 Davis road, Lahore.</span></div>
               <div className="newsletter"><h3>Newsletter</h3><p>Get the latest tour updates and exclusive offers.</p><form action="/contact"><label className="sr-only" htmlFor="email">Email address</label><input id="email" name="email" type="email" placeholder="Enter your email"/><button aria-label="Subscribe"><Icon name="arrow" size={19}/></button></form></div>
             </div>
             <div className="footer-bottom"><span>© 2026 Koh Peaks Tours & Trails. All Rights Reserved.</span><span><Link href="/privacy-policy">Privacy Policy</Link><i></i><Link href="/terms-and-conditions">Terms & Conditions</Link></span></div>
           </footer>
         </div>
       </section>
-
-      <a className="mobile-whatsapp" href="https://wa.me/923354020394" aria-label="Plan your trip on WhatsApp"><Icon name="phone" size={21}/> Plan Your Trip</a>
+ 
+      <a className="mobile-whatsapp" href="https://wa.me/923207538028" aria-label="Plan your trip on WhatsApp"><Icon name="phone" size={21}/> Plan Your Trip</a>
     </main>
   );
 }

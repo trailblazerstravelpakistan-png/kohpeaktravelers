@@ -22,7 +22,7 @@ export default async function DayTourPage({ params }: { params: Promise<{ slug: 
   const tour = dayTours.find((item) => item.slug === slug);
   if (!tour) notFound();
 
-  const whatsappHref = `https://wa.me/923354020394?text=${encodeURIComponent(
+  const whatsappHref = `https://wa.me/923207538028?text=${encodeURIComponent(
     `Assalam o Alaikum, I want to book the ${tour.title} ${tour.subtitle}${tour.date ? ` on ${tour.date}` : ""}.`
   )}`;
 

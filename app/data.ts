@@ -177,8 +177,8 @@ export const dayTours: DayTour[] = [
     altitude: "2,800 m",
     route: "via Dunga Gali",
     image: "/images/mushkpuri-trail.webp",
-    bookingPhone: "+92 335 4020394",
-    bookingPhoneHref: "tel:+923354020394",
+    bookingPhone: "+92 320 7538028",
+    bookingPhoneHref: "tel:+923207538028",
     bookingNote: "Limited seats available — reserve your spot now!",
     details: [
       { label: "Departure Time", value: "6:00 AM Sharp — from G9 Markaz", icon: "clock" },
@@ -256,8 +256,8 @@ export const dayTours: DayTour[] = [
     route: "from Islamabad",
     image: "/images/jahaz-banda.webp",
     secondaryImage: "/images/kumrat-waterfall.webp",
-    bookingPhone: "+92 335 4020394",
-    bookingPhoneHref: "tel:+923354020394",
+    bookingPhone: "+92 320 7538028",
+    bookingPhoneHref: "tel:+923207538028",
     details: [
       { label: "Duration", value: "4 Days Tour", icon: "star" },
       { label: "Departure", value: "From Islamabad", icon: "compass" },
