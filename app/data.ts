@@ -310,3 +310,36 @@ export const galleryImages = [
   ["/images/valley.webp", "Mountain village beside a blue river", "Northern Valleys"],
   ["/images/hero.webp", "Trekker overlooking the Karakoram", "Karakoram Trails"],
 ];
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  badge: string;
+  image: string;
+  bio: string;
+};
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: "Malik Hisam Awan",
+    role: "CEO",
+    badge: "Executive Leadership",
+    image: "/team/Hisam.webp",
+    bio: "Steering Koh Peaks with visionary leadership, ensuring premium travel experiences, strategic growth, and authentic local engagement across Northern Pakistan.",
+  },
+  {
+    name: "Aliha Abbasi",
+    role: "Head of Media",
+    badge: "Creative & Media",
+    image: "/team/Aliha.webp",
+    bio: "Overseeing media strategy, creative content, and digital storytelling to showcase the magnificent beauty and authentic hospitality of  Northern Pakistan.",
+  },
+  {
+    name: "Nayab Farooq",
+    role: "Head of Operations",
+    badge: "Ground Operations",
+    image: "/team/Nayab.webp",
+    bio: "Directing seamless ground operations, tour logistics, safety protocols, and guest experiences to ensure every journey runs smoothly.",
+  },
+];
+

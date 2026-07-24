@@ -1,10 +1,117 @@
 import Link from "next/link";
 import { Icon, PageHero, SiteShell } from "../components/SiteChrome";
+import { teamMembers } from "../data";
 
-export const metadata = { title: "About Us | Koh Peaks", description: "Meet Koh Peaks Tours & Trails and the values behind our journeys." };
+export const metadata = {
+  title: "About Us | Koh Peaks",
+  description: "Meet the Koh Peaks Tours & Trails leadership team and learn about the values behind our mountain journeys.",
+};
 
-export default function AboutPage() { return <SiteShell active="About Us">
-  <PageHero eyebrow="Our Story" title="Born from a Love of the Mountains" copy="Local knowledge, warm hospitality and journeys designed to be remembered." image="/images/hunza-spring.webp"/>
-  <section className="content-section"><div className="container about-grid"><div className="about-collage"><img className="about-main" src="/images/family.webp" alt="Family experiencing the mountains"/><img className="about-small" src="/images/jahaz-banda.webp" alt="Jahaz Banda meadow"/><span><strong>Local roots</strong><small>Real mountain knowledge</small></span></div><div className="about-copy"><div className="eyebrow">Who We Are</div><h2>We create journeys that feel personal</h2><p className="lead-copy">Koh Peaks Tours & Trails was shaped by a simple belief: the best way to experience Northern Pakistan is with people who know it, respect it and love sharing it.</p><p>Our trips balance iconic views with quieter local moments. We value honest planning, dependable support, welcoming hosts and travel that leaves a positive impression on both guests and communities.</p><div className="about-values"><div><Icon name="map"/><span><strong>Local Knowledge</strong><small>Routes shaped by firsthand experience.</small></span></div><div><Icon name="shield"/><span><strong>Responsible Care</strong><small>Thoughtful choices for people and places.</small></span></div><div><Icon name="users"/><span><strong>Warm Hospitality</strong><small>Every guest is welcomed like a friend.</small></span></div></div><Link className="button button-gold" href="/contact">Meet Us on the Road <Icon name="arrow" size={17}/></Link></div></div></section>
-  <section className="numbers-band"><div className="container numbers-grid"><div><strong>06+</strong><span>Signature regions</span></div><div><strong>24/7</strong><span>Traveler support</span></div><div><strong>100%</strong><span>Customizable journeys</span></div><div><strong>1</strong><span>Dedicated local team</span></div></div></section>
-  </SiteShell>; }
+export default function AboutPage() {
+  return (
+    <SiteShell active="About Us">
+      <PageHero
+        eyebrow="Our Story"
+        title="Born from a Love of the Mountains"
+        copy="Local knowledge, warm hospitality and journeys designed to be remembered."
+        image="/images/hunza-spring.webp"
+      />
+      <section className="content-section">
+        <div className="container about-grid">
+          <div className="about-collage">
+            <img className="about-main" src="/images/family.webp" alt="Family experiencing the mountains" />
+            <img className="about-small" src="/images/jahaz-banda.webp" alt="Jahaz Banda meadow" />
+            <span>
+              <strong>Local roots</strong>
+              <small>Real mountain knowledge</small>
+            </span>
+          </div>
+          <div className="about-copy">
+            <div className="eyebrow">Who We Are</div>
+            <h2>We create journeys that feel personal</h2>
+            <p className="lead-copy">
+              Koh Peaks Tours & Trails was shaped by a simple belief: the best way to experience Northern Pakistan is with people who know it, respect it and love sharing it.
+            </p>
+            <p>
+              Our trips balance iconic views with quieter local moments. We value honest planning, dependable support, welcoming hosts and travel that leaves a positive impression on both guests and communities.
+            </p>
+            <div className="about-values">
+              <div>
+                <Icon name="map" />
+                <span>
+                  <strong>Local Knowledge</strong>
+                  <small>Routes shaped by firsthand experience.</small>
+                </span>
+              </div>
+              <div>
+                <Icon name="shield" />
+                <span>
+                  <strong>Responsible Care</strong>
+                  <small>Thoughtful choices for people and places.</small>
+                </span>
+              </div>
+              <div>
+                <Icon name="users" />
+                <span>
+                  <strong>Warm Hospitality</strong>
+                  <small>Every guest is welcomed like a friend.</small>
+                </span>
+              </div>
+            </div>
+            <Link className="button button-gold" href="/contact">
+              Meet Us on the Road <Icon name="arrow" size={17} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="numbers-band">
+        <div className="container numbers-grid">
+          <div>
+            <strong>06+</strong>
+            <span>Signature regions</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>Traveler support</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Customizable journeys</span>
+          </div>
+          <div>
+            <strong>1</strong>
+            <span>Dedicated local team</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="team-section">
+        <div className="container">
+          <div className="team-intro">
+            <div className="eyebrow">Our Leadership & Team</div>
+            <h2>Meet the Minds Behind Koh Peaks</h2>
+            <p>
+              Passionate explorers, operational experts, and media creators working together to make your journey through Northern Pakistan extraordinary.
+            </p>
+          </div>
+          <div className="team-grid">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="team-card">
+                <div className="team-image-wrapper">
+                  <img src={member.image} alt={member.name} />
+                  <span className="team-badge">{member.badge}</span>
+                </div>
+                <div className="team-info">
+                  <h3>{member.name}</h3>
+                  <div className="team-role">{member.role}</div>
+                  <p className="team-bio">{member.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </SiteShell>
+  );
+}
