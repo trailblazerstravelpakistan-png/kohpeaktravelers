@@ -21,6 +21,8 @@ create table if not exists public.koh_peaks_enquiries (
   travelers text,
   reference text,
   message text,
+  payment_proof text,
+  payment_proof_name text,
   status text not null default 'new'
     check (status in ('new', 'in_progress', 'resolved', 'archived')),
   source text not null default 'website'
@@ -58,3 +60,52 @@ create policy "admin_all_koh_peaks_enquiries"
 -- replace the `using (true)` above with, e.g.:
 --   using ( auth.jwt()->>'email' in ('you@kohpeaks.com') )
 -- ------------------------------------------------------------
+
+-- ------------------------------------------------------------
+-- ADMIN LOGIN USER  (for the /admin panel sign-in form)
+-- Creates admin@kohpeaks.com if it doesn't already exist.
+-- Change the email/password below before running if you want a
+-- different login.
+-- ------------------------------------------------------------
+do $$
+declare
+  v_user_id uuid;
+  v_email text := 'admin@kohpeaks.com';
+  v_password text := 'adminkohpeaks';
+begin
+  if not exists (select 1 from auth.users where email = v_email) then
+    v_user_id := gen_random_uuid();
+
+    insert into auth.users (
+      instance_id, id, aud, role, email, encrypted_password,
+      email_confirmed_at, recovery_sent_at, last_sign_in_at,
+      raw_app_meta_data, raw_user_meta_data,
+      created_at, updated_at,
+      confirmation_token, email_change, email_change_token_new, recovery_token
+    ) values (
+      '00000000-0000-0000-0000-000000000000',
+      v_user_id,
+      'authenticated',
+      'authenticated',
+      v_email,
+      crypt(v_password, gen_salt('bf')),
+      now(), now(), now(),
+      '{"provider":"email","providers":["email"]}',
+      '{}',
+      now(), now(),
+      '', '', '', ''
+    );
+
+    insert into auth.identities (
+      id, user_id, provider_id, identity_data, provider,
+      last_sign_in_at, created_at, updated_at
+    ) values (
+      gen_random_uuid(),
+      v_user_id,
+      v_user_id::text,
+      jsonb_build_object('sub', v_user_id::text, 'email', v_email),
+      'email',
+      now(), now(), now()
+    );
+  end if;
+end $$;

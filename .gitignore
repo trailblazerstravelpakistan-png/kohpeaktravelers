@@ -31,6 +31,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# local data backups (contain customer PII)
+/backups/
+
 # vercel
 .vercel
 
