@@ -328,7 +328,7 @@ export const teamMembers: TeamMember[] = [
     bio: "Steering Koh Peaks with visionary leadership, ensuring premium travel experiences, strategic growth, and authentic local engagement across Northern Pakistan.",
   },
   {
-    name: "Areeba Khan",
+    name: "Maimoona Malik",
     role: "Co-Partner",
     badge: "Leadership & Growth",
     image: "/team/co-partner.png",

@@ -246,7 +246,7 @@
 .team-intro h2 { margin: 0 0 14px; color: var(--forest); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(34px, 4vw, 48px); font-weight: 400; line-height: 1.1; letter-spacing: -.02em; }
 .team-intro p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
 
-.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 360px)); justify-content: center; gap: 32px; }
 .team-card { position: relative; display: flex; flex-direction: column; background: var(--snow); border: 1px solid rgba(24, 41, 35, 0.08); border-radius: 16px; overflow: hidden; box-shadow: 0 16px 36px rgba(24, 41, 35, 0.06); transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
 .team-card:hover { transform: translateY(-8px); box-shadow: 0 24px 50px rgba(24, 41, 35, 0.12); border-color: rgba(201, 154, 26, 0.4); }
 
